@@ -6,3 +6,4 @@
 - [x] Integrate original portfolio visuals and map all 17 live project links
 - [x] Add bilingual project stories, galleries, outcomes, and previous/next navigation
 - [ ] Replace pending WhatsApp/email/legal/location once supplied by client
+- [x] Integrate uploaded website previews and mixed-media galleries for all 17 works
