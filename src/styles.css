@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss" source(none); @source "../src"; @import "tw-animate-css";
 :root{--ink:#11110f;--paper:#f0eee6;--lime:#c8ff2e;--red:#ff5538;--blue:#1657ff;--line:rgba(17,17,15,.18);--radius:1rem;--background:oklch(.94 .01 85);--foreground:oklch(.13 .01 85);--primary:oklch(.91 .25 120);--primary-foreground:oklch(.13 .01 85);--border:oklch(.25 .01 85 / 20%);--input:oklch(.25 .01 85 / 20%);--ring:oklch(.78 .2 120)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}img{display:block;max-width:100%}::selection{background:var(--lime);color:var(--ink)}
