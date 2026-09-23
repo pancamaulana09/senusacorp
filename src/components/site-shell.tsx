@@ -3,6 +3,8 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import { LanguageProvider, useLanguage } from "../lib/i18n";
 import { projects } from "../lib/site-data";
+import logoAsset from "../assets/brand/senusa-logo.webp.asset.json";
+import iconAsset from "../assets/brand/senusa-icon.webp.asset.json";
 
 const nav = [
   ["/work", "Karya", "Work"], ["/services", "Layanan", "Services"], ["/process", "Proses", "Process"],
@@ -13,7 +15,10 @@ function Header() {
   const { language, setLanguage } = useLanguage();
   const [open, setOpen] = useState(false);
   return <header className="site-header">
-    <Link to="/" className="wordmark" aria-label="SenusaCorp home"><span>se</span>nusa<span>corp</span><i /></Link>
+    <Link to="/" className="wordmark" aria-label="SenusaCorp home">
+      <img className="brand-logo-full" src={logoAsset.url} alt="" width="1265" height="330" />
+      <img className="brand-logo-icon" src={iconAsset.url} alt="" width="600" height="665" />
+    </Link>
     <nav className="desktop-nav" aria-label="Main navigation">
       {nav.map(([to,id,en]) => <Link key={to} to={to} activeProps={{className:"active"}}>{language === "id" ? id : en}</Link>)}
     </nav>
@@ -57,7 +62,7 @@ function Footer() {
   return <footer className="site-footer">
     <div className="footer-pitch"><p className="eyebrow">{language === "id" ? "Punya ide?" : "Have an idea?"}</p><h2>{language === "id" ? "Mari buat jadi nyata." : "Let's make it real."}</h2></div>
     <Link to="/contact" className="circle-link" aria-label="Start a brief"><ArrowUpRight/></Link>
-    <div className="footer-directory"><div><p className="eyebrow">SenusaCorp</p><p>{language === "id" ? "Studio kreatif dan teknologi Indonesia." : "An Indonesian creative and technology studio."}</p></div><nav aria-label="Footer navigation">{nav.map(([to,id,en])=><Link key={to} to={to}>{language === "id" ? id : en}</Link>)}</nav><figure><img src={projects[3]?.image} alt={language === "id" ? "Karya pilihan SenusaCorp" : "Selected SenusaCorp work"}/></figure></div>
+    <div className="footer-directory"><div className="footer-brand"><img src={logoAsset.url} alt="SenusaCorp" width="1265" height="330"/><p>{language === "id" ? "Studio kreatif dan teknologi Indonesia." : "An Indonesian creative and technology studio."}</p></div><nav aria-label="Footer navigation">{nav.map(([to,id,en])=><Link key={to} to={to}>{language === "id" ? id : en}</Link>)}</nav><figure><img src={projects[3]?.image} alt={language === "id" ? "Karya pilihan SenusaCorp" : "Selected SenusaCorp work"}/></figure></div>
     <div className="footer-bottom"><span>© 2026 SenusaCorp</span><span>{language === "id" ? "Indonesia · bekerja lintas zona waktu" : "Indonesia · working across time zones"}</span><Link to="/privacy">{language === "id" ? "Privasi" : "Privacy"}</Link><span>IG · BE · LI</span></div>
   </footer>;
 }
