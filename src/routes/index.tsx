@@ -4,6 +4,7 @@ import { useLanguage } from "../lib/i18n";
 import { assets, projects } from "../lib/site-data";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({ meta: [
     { title: "SenusaCorp — Creative & Digital Agency Indonesia" },
     { name: "description", content: "Website, identitas brand, dan aplikasi bisnis yang dirancang dengan hati dan dibangun untuk bekerja." },
