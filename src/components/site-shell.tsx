@@ -29,8 +29,6 @@ function Header() {
 function MotionObserver() {
   const location = useLocation();
   useEffect(() => {
-    const elements = document.querySelectorAll("main section, main article, .project-card, .gallery-item");
-    elements.forEach((element) => element.classList.add("reveal-ready"));
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -39,8 +37,17 @@ function MotionObserver() {
         }
       });
     }, { rootMargin: "0px 0px -8%", threshold: 0.08 });
-    elements.forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+    const timer = window.setTimeout(() => {
+      const elements = document.querySelectorAll("main section, main article, .project-card, .gallery-item");
+      elements.forEach((element) => {
+        element.classList.add("reveal-ready");
+        observer.observe(element);
+      });
+    }, 350);
+    return () => {
+      window.clearTimeout(timer);
+      observer.disconnect();
+    };
   }, [location.pathname]);
   return null;
 }
