@@ -6,6 +6,7 @@ import { supabase } from "../integrations/supabase/client";
 import { useLanguage } from "../lib/i18n";
 
 export const Route = createFileRoute("/contact")({
+  staticData: { sitemap: true },
   head: () => ({ meta: [
     { title: "Mulai Proyek — SenusaCorp" },
     { name: "description", content: "Ceritakan kebutuhan website, brand, CRM, HRM, atau aplikasi bisnis Anda kepada SenusaCorp." },

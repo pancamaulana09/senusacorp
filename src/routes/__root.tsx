@@ -74,15 +74,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SenusaCorp — Creative & Digital Agency Indonesia" },
-      { name: "description", content: "SenusaCorp merancang website, identitas brand, dan aplikasi bisnis yang bekerja nyata." },
       { name: "author", content: "SenusaCorp" },
-      { property: "og:title", content: "SenusaCorp — Ideas made useful" },
-      { property: "og:description", content: "Creative and digital agency for websites, brands, CRM, and HRM." },
+      { property: "og:site_name", content: "SenusaCorp" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#11110f" },
