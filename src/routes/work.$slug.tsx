@@ -10,8 +10,8 @@ function ProjectDetail(){
   const{language}=useLanguage();
   const id=language==="id";
   const index=projects.findIndex(project=>project.slug===p.slug);
-  const previous=projects[(index-1+projects.length)%projects.length];
-  const next=projects[(index+1)%projects.length];
+  const previous=projects[(index-1+projects.length)%projects.length] ?? p;
+  const next=projects[(index+1)%projects.length] ?? p;
   return <>
     <section className="detail-hero"><div className="case-index">{String(index+1).padStart(2,"0")} / {String(projects.length).padStart(2,"0")}</div><p className="eyebrow">{p.sector[language]} · {p.year}</p><h1>{p.name}</h1><p className="page-intro">{p.descriptor[language]}</p><a className="button button-light detail-live" href={p.url} target="_blank" rel="noreferrer">{id?"Buka proyek langsung":"Visit live project"}<ArrowUpRight size={16}/></a></section>
     <div className="detail-image"><img src={p.image} width="1408" height="1008" alt={`${p.name} — ${p.descriptor[language]}`}/></div>

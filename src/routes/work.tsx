@@ -1,9 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
-import { useState } from "react";
-import { PageHero } from "../components/site-shell";
-import { useLanguage } from "../lib/i18n";
-import { projects } from "../lib/site-data";
+import { createFileRoute, Outlet } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/work")({head:()=>({meta:[{title:"Karya SenusaCorp — Website, Brand & Digital Product"},{name:"description",content:"Jelajahi proyek website, brand, hospitality, budaya, dan aplikasi bisnis SenusaCorp."},{property:"og:title",content:"Karya SenusaCorp"},{property:"og:description",content:"Selected websites, brands, and digital products from Indonesia."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:Work});
-function Work(){const{language}=useLanguage();const id=language==="id";const[filter,setFilter]=useState("All");const filters=["All","Brand & Commerce","Culture & Community","Hospitality","Digital Product"];const shown=filter==="All"?projects:projects.filter(p=>p.category===filter);return <><PageHero index="01" eyebrow={id?"Karya kami":"Our work"} title={id?"Pilihan karya.":"Selected work."} intro={id?"Brand, situs, dan produk digital yang dibangun untuk beragam bisnis Indonesia.":"Brands, websites, and digital products built for a diverse set of Indonesian businesses."}/><section className="section"><div className="filter-bar">{filters.map(f=><button key={f} className={filter===f?"active":""} onClick={()=>setFilter(f)}>{f==="All"?(id?"Semua":"All"):f}</button>)}</div><div className="work-grid">{shown.map(p=><article key={p.slug} className="project-card"><Link to="/work/$slug" params={{slug:p.slug}} aria-label={`${id?"Lihat studi kasus":"View case study"} ${p.name}`}><div className="project-image"><img src={p.image} loading="lazy" width="1408" height="1008" alt={p.name}/></div></Link><div className="project-meta"><Link to="/work/$slug" params={{slug:p.slug}}><small>{p.sector[language]} · {p.year}</small><h3>{p.name}</h3></Link><div className="project-actions"><p>{p.descriptor[language]}</p><a href={p.url} target="_blank" rel="noreferrer">{id?"Preview langsung":"Live preview"}<ArrowUpRight size={14}/></a></div></div></article>)}</div></section></>}
+export const Route = createFileRoute("/work")({
+  component: WorkLayout,
+});
+
+function WorkLayout() {
+  return <Outlet />;
+}
