@@ -1,7 +1,8 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { LanguageProvider, useLanguage } from "../lib/i18n";
+import { projects } from "../lib/site-data";
 
 const nav = [
   ["/work", "Karya", "Work"], ["/services", "Layanan", "Services"], ["/process", "Proses", "Process"],
@@ -25,19 +26,39 @@ function Header() {
   </header>;
 }
 
+function MotionObserver() {
+  const location = useLocation();
+  useEffect(() => {
+    const elements = document.querySelectorAll("main section, main article, .project-card, .gallery-item");
+    elements.forEach((element) => element.classList.add("reveal-ready"));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8%", threshold: 0.08 });
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, [location.pathname]);
+  return null;
+}
+
 function Footer() {
   const { language } = useLanguage();
   return <footer className="site-footer">
-    <div><p className="eyebrow">{language === "id" ? "Punya ide?" : "Have an idea?"}</p><h2>{language === "id" ? "Mari buat jadi nyata." : "Let's make it real."}</h2></div>
+    <div className="footer-pitch"><p className="eyebrow">{language === "id" ? "Punya ide?" : "Have an idea?"}</p><h2>{language === "id" ? "Mari buat jadi nyata." : "Let's make it real."}</h2></div>
     <Link to="/contact" className="circle-link" aria-label="Start a brief"><ArrowUpRight/></Link>
+    <div className="footer-directory"><div><p className="eyebrow">SenusaCorp</p><p>{language === "id" ? "Studio kreatif dan teknologi Indonesia." : "An Indonesian creative and technology studio."}</p></div><nav aria-label="Footer navigation">{nav.map(([to,id,en])=><Link key={to} to={to}>{language === "id" ? id : en}</Link>)}</nav><figure><img src={projects[3]?.image} alt={language === "id" ? "Karya pilihan SenusaCorp" : "Selected SenusaCorp work"}/></figure></div>
     <div className="footer-bottom"><span>© 2026 SenusaCorp</span><span>{language === "id" ? "Indonesia · bekerja lintas zona waktu" : "Indonesia · working across time zones"}</span><Link to="/privacy">{language === "id" ? "Privasi" : "Privacy"}</Link><span>IG · BE · LI</span></div>
   </footer>;
 }
 
 export function SiteShell({ children }: { children: ReactNode }) {
-  return <LanguageProvider><Header/><main>{children}</main><Footer/></LanguageProvider>;
+  return <LanguageProvider><MotionObserver/><Header/><main>{children}</main><Footer/></LanguageProvider>;
 }
 
 export function PageHero({ index, eyebrow, title, intro }: { index: string; eyebrow: string; title: ReactNode; intro: string }) {
-  return <section className="page-hero"><div className="page-number">({index})</div><div><p className="eyebrow">{eyebrow}</p><h1>{title}</h1><p className="page-intro">{intro}</p></div></section>;
+  return <section className="page-hero"><div className="page-number">({index})</div><div className="page-hero-title"><p className="eyebrow">{eyebrow}</p><h1>{title}</h1></div><p className="page-intro">{intro}</p><span className="page-hero-mark" aria-hidden="true">SC</span></section>;
 }
