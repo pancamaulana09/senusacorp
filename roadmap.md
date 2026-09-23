@@ -9,3 +9,5 @@
 - [x] Integrate uploaded website previews and mixed-media galleries for all 17 works
 - [x] Redesign the full site with the approved editorial reference layout and motion system
 - [x] Validate every redesigned route, interaction, and responsive state
+- [x] Integrate the official SenusaCorp logo and responsive icon treatment
+- [ ] Validate logo, favicon, navigation, and layout across desktop and mobile
