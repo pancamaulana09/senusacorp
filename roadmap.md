@@ -7,3 +7,5 @@
 - [x] Add bilingual project stories, galleries, outcomes, and previous/next navigation
 - [ ] Replace pending WhatsApp/email/legal/location once supplied by client
 - [x] Integrate uploaded website previews and mixed-media galleries for all 17 works
+- [ ] Redesign the full site with the approved editorial reference layout and motion system
+- [ ] Validate every redesigned route, interaction, and responsive state
