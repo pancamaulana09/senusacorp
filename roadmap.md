@@ -11,3 +11,5 @@
 - [x] Validate every redesigned route, interaction, and responsive state
 - [x] Integrate the official SenusaCorp logo and responsive icon treatment
 - [x] Validate logo, favicon, navigation, and layout across desktop and mobile
+- [x] Add business-focused home sections: why a website matters, price comparison, UMKM/professional segments
+
