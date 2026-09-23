@@ -3,4 +3,6 @@
 - [x] Original image set and secure project-brief storage
 - [x] Complete all content pages and case studies
 - [x] Verify navigation, language switching, filters, and brief submission
+- [x] Integrate original portfolio visuals and map all 17 live project links
+- [x] Add bilingual project stories, galleries, outcomes, and previous/next navigation
 - [ ] Replace pending WhatsApp/email/legal/location once supplied by client
