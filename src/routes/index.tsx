@@ -1,24 +1,38 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
+import { useLanguage } from "../lib/i18n";
+import { assets, projects } from "../lib/site-data";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({ meta: [
+    { title: "SenusaCorp — Creative & Digital Agency Indonesia" },
+    { name: "description", content: "Website, identitas brand, dan aplikasi bisnis yang dirancang dengan hati dan dibangun untuk bekerja." },
+    { property: "og:title", content: "SenusaCorp — Ideas made useful" },
+    { property: "og:description", content: "Creative and digital agency for websites, brands, CRM, and HRM." },
+    { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
+  ]}), component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+function Home() {
+  const { language } = useLanguage(); const id = language === "id";
+  const featured = projects.slice(0, 5);
+  return <>
+    <section className="hero">
+      <div className="hero-top"><div><p className="eyebrow">SenusaCorp · Creative & Digital Agency</p><h1>{id ? <>IDE JADI <em>NYATA.</em></> : <>IDEAS MADE <em>USEFUL.</em></>}</h1></div><div><p className="hero-copy">{id ? "Kami merancang identitas, website, dan sistem digital yang tidak hanya terlihat bagus—tetapi bekerja nyata." : "We design identities, websites, and digital systems that don't just look good—they work."}</p><Link to="/work" className="button button-light">{id ? "Lihat karya" : "See our work"}<ArrowUpRight size={16}/></Link></div></div>
+      <div className="hero-media"><img src={assets.studioImage} width="1600" height="1008" alt={id ? "Proses kreatif SenusaCorp di studio" : "SenusaCorp creative process in the studio"}/></div>
+      <div className="floating-card"><img src={assets.digitalImage} width="1408" height="1008" alt="Digital product interface"/><b>CRM / HRM</b><small>Product systems · 2026</small></div><span className="scroll-note">{id ? "Gulir untuk jelajah" : "Scroll to explore"}</span>
+    </section>
+    <div className="ticker"><div className="ticker-track"><span>IMAGINE <i>·</i> DESIGN <i>·</i> BUILD <i>·</i> GROW <i>·</i></span><span>IMAGINE <i>·</i> DESIGN <i>·</i> BUILD <i>·</i> GROW <i>·</i></span></div></div>
+    <section className="section"><div className="section-header"><p className="eyebrow">(01) {id ? "Tentang kami" : "About us"}</p><div><h2>{id ? "Karya dengan tujuan." : "Craft with purpose."}</h2></div></div><p className="section-lead">{id ? "SenusaCorp adalah studio kreatif dan teknologi Indonesia. Kami menyatukan strategi, desain, dan engineering untuk membantu bisnis tampil lebih percaya diri dan berjalan lebih efisien." : "SenusaCorp is an Indonesian creative and technology studio. We unite strategy, design, and engineering to help businesses show up confidently and operate efficiently."}</p></section>
+    <section className="section"><div className="section-header"><p className="eyebrow">(02) {id ? "Karya pilihan" : "Selected work"}</p><h2>{id ? "Bukti, bukan janji." : "Proof, not promises."}</h2></div><div className="work-grid">{featured.map(project => <Link key={project.slug} to="/work/$slug" params={{slug:project.slug}} className="project-card"><div className="project-image"><img src={project.image} loading="lazy" width="1408" height="1008" alt={project.name}/></div><div className="project-meta"><div><small>{project.category} · {project.year}</small><h3>{project.name}</h3></div><p>{project.descriptor[language]}</p></div></Link>)}</div><div style={{marginTop:50}}><Link to="/work" className="button button-dark">{id ? "Semua karya" : "All work"}<ArrowUpRight size={16}/></Link></div></section>
+    <section className="section section-dark"><div className="section-header"><p className="eyebrow">(03) {id ? "Kemampuan" : "Capabilities"}</p><h2>{id ? "Dari citra hingga sistem." : "From image to system."}</h2></div><div className="services-list">{[
+      ["01", id?"Brand & Identitas":"Brand & Identity", id?"Strategi, nama, identitas visual, dan panduan yang membuat brand konsisten.":"Strategy, naming, visual identity, and guidelines for a consistent brand."],
+      ["02", id?"Website & Commerce":"Websites & Commerce", id?"Portofolio, company profile, landing page, dan toko online yang cepat.":"Fast portfolios, company profiles, landing pages, and online stores."],
+      ["03", id?"Aplikasi Bisnis":"Business Applications", id?"CRM, HRM, dashboard, dan sistem khusus untuk alur kerja Anda.":"CRM, HRM, dashboards, and custom systems for your workflows."],
+      ["04", id?"Kampanye Digital":"Digital Campaigns", id?"Konsep, konten, dan pengalaman digital untuk menarik perhatian.":"Concepts, content, and digital experiences designed to earn attention."],
+    ].map(([n,t,d])=><div className="service-row" key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p><ArrowUpRight/></div>)}</div></section>
+    <section className="section"><div className="image-split"><div className="image-pill"><img src={assets.brandImage} loading="lazy" width="1408" height="1008" alt={id?"Pengembangan identitas brand Indonesia":"Indonesian brand identity development"}/></div><div><p className="eyebrow">(04) {id?"Cara kerja":"How we work"}</p><h2 className="section-lead">{id?"Dekat, transparan, dan bergerak cepat—tanpa mengorbankan detail.":"Close, transparent, and fast-moving—without sacrificing detail."}</h2><div className="process-mini">{(id?["Temukan","Arahkan","Wujudkan","Tumbuhkan"]:["Discover","Direct","Deliver","Grow"]).map((x,i)=><article key={x}><b>0{i+1}</b><h3>{x}</h3></article>)}</div><Link to="/process" className="button button-dark">{id?"Lihat proses":"Our process"}<ArrowUpRight size={16}/></Link></div></div></section>
+    <section className="section section-lime"><div className="price-callout"><div><p className="eyebrow">{id?"Mulai sederhana. Tumbuh kemudian.":"Start simple. Grow from there."}</p><h2><span>{id?"Mulai dari":"Starting from"}</span>Rp200K</h2></div><div><p>{id?"Paket Quick Start untuk kebutuhan digital yang ringkas dan jelas. Solusi bisnis lengkap dihitung sesuai lingkup.":"Quick Start for a focused, clearly defined digital need. Full business solutions are scoped separately."}</p><Link to="/pricing" className="button button-dark">{id?"Lihat paket":"See packages"}<ArrowUpRight size={16}/></Link></div></div></section>
+    <section className="section section-dark"><div className="section-header"><p className="eyebrow">(05) {id?"Kata mereka":"Kind words"}</p><h2>{id?"Kolaborasi yang terasa." : "Collaboration you can feel."}</h2></div><div className="quote-grid"><div className="quote"><blockquote>“{id?"SenusaCorp menangkap karakter brand kami dan mengubahnya menjadi pengalaman digital yang jauh lebih matang.":"SenusaCorp captured our brand's character and turned it into a much more mature digital experience."}”</blockquote><cite>— Partner brand, Indonesia</cite></div><div className="quote"><blockquote>“{id?"Prosesnya jelas, komunikasinya enak, dan hasil akhirnya bukan sekadar cantik—benar-benar bisa dipakai.":"The process was clear, communication was easy, and the result wasn't merely beautiful—it was genuinely useful."}”</blockquote><cite>— Product collaborator, Indonesia</cite></div></div></section>
+  </>;
 }
