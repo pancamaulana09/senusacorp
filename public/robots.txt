@@ -13,4 +13,7 @@ Allow: /
 User-agent: *
 Allow: /
 
+User-agent: *
+Disallow: /api/
+
 Sitemap: https://senusacorp.lovable.app/sitemap.xml
