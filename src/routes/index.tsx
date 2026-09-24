@@ -3,27 +3,78 @@ import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "../lib/i18n";
 import { assets, projects } from "../lib/site-data";
 
+const SITE = "https://senusacorp.lovable.app";
+
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
-  head: () => ({ meta: [
-    { title: "SenusaCorp — Creative & Digital Agency Indonesia" },
-    { name: "description", content: "Website, identitas brand, dan aplikasi bisnis yang dirancang dengan hati dan dibangun untuk bekerja." },
-    { property: "og:title", content: "SenusaCorp — Ideas made useful" },
-    { property: "og:description", content: "Creative and digital agency for websites, brands, CRM, and HRM." },
-    { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
-  ]}), component: Home,
+  head: () => ({
+    meta: [
+      { title: "Jasa Pembuatan Website Profesional Mulai Rp200 Ribu — SenusaCorp" },
+      { name: "description", content: "Jasa pembuatan website, web design, company profile, toko online, hingga aplikasi bisnis CRM & HRM untuk UMKM dan perusahaan Indonesia. Harga transparan mulai Rp200 ribu." },
+      { name: "keywords", content: "jasa pembuatan website, jasa website, web design, desain website, jasa buat website, jasa pembuatan website murah, website company profile, jasa website UMKM, pembuatan toko online, jasa aplikasi CRM HRM" },
+      { property: "og:title", content: "Jasa Pembuatan Website Profesional Mulai Rp200 Ribu — SenusaCorp" },
+      { property: "og:description", content: "Website, company profile, toko online, dan aplikasi bisnis untuk UMKM & perusahaan Indonesia. 17 karya live, harga jelas." },
+      { property: "og:url", content: SITE + "/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: SITE + "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "SenusaCorp",
+          url: SITE,
+          image: SITE + "/favicon.png",
+          description: "Jasa pembuatan website, web design, company profile, toko online, dan aplikasi bisnis CRM/HRM untuk UMKM, profesional, dan perusahaan di Indonesia.",
+          areaServed: "Indonesia",
+          serviceType: ["Jasa pembuatan website", "Web design", "Website company profile", "Toko online", "Aplikasi bisnis CRM & HRM"],
+          priceRange: "Rp200.000 - Rp15.000.000",
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Paket jasa pembuatan website",
+            itemListElement: [
+              { "@type": "Offer", name: "Quick Start", price: "200000", priceCurrency: "IDR", url: SITE + "/pricing" },
+              { "@type": "Offer", name: "Launch", price: "1500000", priceCurrency: "IDR", url: SITE + "/pricing" },
+              { "@type": "Offer", name: "Business", price: "4500000", priceCurrency: "IDR", url: SITE + "/pricing" },
+            ],
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "SenusaCorp",
+          url: SITE,
+          inLanguage: ["id", "en"],
+        }),
+      },
+    ],
+  }),
+  component: Home,
 });
+
 
 function Home() {
   const { language } = useLanguage(); const id = language === "id";
   const featured = projects.slice(0, 5);
   return <>
     <section className="hero editorial-hero">
-      <div className="hero-top"><div><p className="eyebrow">SenusaCorp · Creative & Digital Agency</p><h1>{id ? <>IDE JADI <em>NYATA.</em></> : <>IDEAS MADE <em>USEFUL.</em></>}</h1></div><div><p className="hero-copy">{id ? "Kami merancang identitas, website, dan sistem digital yang tidak hanya terlihat bagus—tetapi bekerja nyata." : "We design identities, websites, and digital systems that don't just look good—they work."}</p><Link to="/work" className="button button-light">{id ? "Lihat karya" : "See our work"}<ArrowUpRight size={16}/></Link></div></div>
+      <div className="hero-top"><div><p className="eyebrow">{id ? "Jasa Pembuatan Website & Aplikasi Bisnis Indonesia" : "Website & Business App Agency Indonesia"}</p><h1>{id ? <>IDE JADI <em>NYATA.</em></> : <>IDEAS MADE <em>USEFUL.</em></>}</h1></div><div><p className="hero-copy">{id ? "SenusaCorp adalah jasa pembuatan website profesional: web design, company profile, toko online, hingga aplikasi bisnis CRM & HRM. Mulai Rp200 ribu." : "SenusaCorp builds professional websites: web design, company profiles, online stores, and CRM & HRM business apps. From Rp200k."}</p><Link to="/work" className="button button-light">{id ? "Lihat karya" : "See our work"}<ArrowUpRight size={16}/></Link></div></div>
       <div className="hero-media"><img src={assets.studioImage} width="1600" height="1008" alt={id ? "Proses kreatif SenusaCorp di studio" : "SenusaCorp creative process in the studio"}/><span className="media-caption">01 / {id?"Studio & proses":"Studio & process"}</span></div>
       <div className="floating-card"><img src={assets.digitalImage} width="1408" height="1008" alt="Digital product interface"/><b>CRM / HRM</b><small>Product systems · 2026</small></div><span className="scroll-note">{id ? "Gulir untuk jelajah" : "Scroll to explore"}</span>
     </section>
     <div className="ticker"><div className="ticker-track"><span>IMAGINE <i>·</i> DESIGN <i>·</i> BUILD <i>·</i> GROW <i>·</i></span><span>IMAGINE <i>·</i> DESIGN <i>·</i> BUILD <i>·</i> GROW <i>·</i></span></div></div>
+    <section className="section clients-band" aria-label={id ? "Brand yang kami bangun" : "Brands we have built"}>
+      <p className="eyebrow">{id ? "Dipercaya brand yang kami bangun" : "Trusted by the brands we build"}</p>
+      <div className="logo-marquee"><div className="logo-track">{[...projects, ...projects].map((p, i) => <a key={p.slug + i} href={p.url} target="_blank" rel="noopener" className="client-logo" aria-hidden={i >= projects.length ? true : undefined} tabIndex={i >= projects.length ? -1 : undefined}>{p.name}</a>)}</div></div>
+      <p className="clients-note">{id ? "17 brand di Indonesia—fesyen, kuliner, hospitality, komunitas, dan portofolio profesional—semuanya bisa Anda buka langsung." : "17 Indonesian brands—fashion, food, hospitality, community, and professional portfolios—all live and openable."}</p>
+    </section>
+
     <section className="section manifesto"><div className="section-header"><p className="eyebrow">(01) {id ? "Tentang kami" : "About us"}</p><div><h2>{id ? "Karya dengan tujuan." : "Craft with purpose."}</h2></div></div><p className="section-lead">{id ? "SenusaCorp adalah studio kreatif dan teknologi Indonesia. Kami menyatukan strategi, desain, dan engineering untuk membantu bisnis tampil lebih percaya diri dan berjalan lebih efisien." : "SenusaCorp is an Indonesian creative and technology studio. We unite strategy, design, and engineering to help businesses show up confidently and operate efficiently."}</p><div className="stats-strip"><div><b>17</b><span>{id?"karya digital":"digital works"}</span></div><div><b>04</b><span>{id?"disiplin inti":"core disciplines"}</span></div><div><b>02</b><span>{id?"bahasa":"languages"}</span></div><div><b>01</b><span>{id?"partner terpadu":"integrated partner"}</span></div></div></section>
     <section className="section why-band"><div className="section-header"><p className="eyebrow">(02) {id ? "Kenapa penting" : "Why it matters"}</p><h2>{id ? "Bisnis tanpa website, hilang pelanggan." : "No website means lost customers."}</h2></div><p className="section-lead">{id ? "Sebelum membeli atau bekerja sama, orang mencari nama bisnis Anda di Google. Kalau tidak ketemu, mereka pindah ke pesaing." : "Before buying, people search your business on Google. If they can't find you, they go to a competitor."}</p><div className="why-grid">{[
       [id?"Dipercaya sejak klik pertama":"Trusted from the first click", id?"Website resmi membuat bisnis Anda terlihat serius dan profesional, bukan sekadar akun media sosial.":"An official website makes your business look serious and professional, not just a social media account."],
