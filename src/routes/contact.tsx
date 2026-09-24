@@ -7,7 +7,7 @@ import { useLanguage } from "../lib/i18n";
 
 export const Route = createFileRoute("/contact")({
   staticData: { sitemap: true },
-  head:()=>pageHead({path:"/contact",title:"Konsultasi Pembuatan Website Gratis — Kontak SenusaCorp",description:"Ceritakan kebutuhan website, toko online, branding, CRM, atau HRM Anda. Kirim brief proyek dan tim SenusaCorp akan menyiapkan lingkup serta estimasi harga.",breadcrumbs:[{name:"Kontak",path:"/contact"}]}), component: Contact,
+  head:()=>pageHead({path:"/contact",title:"Konsultasi Pembuatan Website — Kontak SenusaCorp",description:"Ceritakan kebutuhan website, toko online, branding, CRM, atau HRM Anda. Kirim brief proyek dan tim SenusaCorp akan menyiapkan lingkup serta estimasi harga.",breadcrumbs:[{name:"Kontak",path:"/contact"}]}), component: Contact,
 });
 
 type Brief = { service: string; budget: string; timeline: string; name: string; email: string; phone: string; company: string; message: string };

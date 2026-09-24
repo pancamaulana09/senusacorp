@@ -68,7 +68,7 @@ function Footer() {
 }
 
 export function SiteShell({ children }: { children: ReactNode }) {
-  return <LanguageProvider><MotionObserver/><Header/><main>{children}</main><Footer/></LanguageProvider>;
+  return <LanguageProvider><MotionObserver/><a href="#main" className="skip-link">Lewati ke konten</a><Header/><main id="main">{children}</main><Footer/></LanguageProvider>;
 }
 
 export function PageHero({ index, eyebrow, title, intro }: { index: string; eyebrow: string; title: ReactNode; intro: string }) {

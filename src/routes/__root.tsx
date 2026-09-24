@@ -84,6 +84,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#11110f" },
+      ...(import.meta.env.VITE_GOOGLE_SITE_VERIFICATION ? [{ name: "google-site-verification", content: import.meta.env.VITE_GOOGLE_SITE_VERIFICATION as string }] : []),
+      ...(import.meta.env.VITE_BING_SITE_VERIFICATION ? [{ name: "msvalidate.01", content: import.meta.env.VITE_BING_SITE_VERIFICATION as string }] : []),
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -94,6 +96,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+      { rel: "manifest", href: "/manifest.webmanifest" },
     ],
     scripts: [
       {
