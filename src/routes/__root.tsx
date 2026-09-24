@@ -95,6 +95,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "SenusaCorp",
+          url: "https://senusacorp.lovable.app",
+          logo: "https://senusacorp.lovable.app/favicon.png",
+          description: "Jasa pembuatan website, web design, dan aplikasi bisnis CRM & HRM untuk UMKM dan perusahaan di Indonesia.",
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
