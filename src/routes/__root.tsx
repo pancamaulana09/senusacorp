@@ -80,6 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "author", content: "SenusaCorp" },
+      { name: "google-site-verification", content: "vxlBHglfsKo20Cht2FBD2rJEl1uCQLg1Q4HZ6QNAduU" },
       { property: "og:site_name", content: "SenusaCorp" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
