@@ -13,3 +13,5 @@
 - [x] Validate logo, favicon, navigation, and layout across desktop and mobile
 - [x] Add business-focused home sections: why a website matters, price comparison, UMKM/professional segments
 
+- [x] SEO kata kunci "jasa pembuatan website": title/description/keywords, canonical + og:url tiap halaman, JSON-LD ProfessionalService/WebSite/Organization/CreativeWork
+- [x] Baris brand klien (17 karya nyata) di homepage
