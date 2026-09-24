@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import{pageHead}from"../lib/seo";import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Check, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { PageHero } from "../components/site-shell";
@@ -7,13 +7,7 @@ import { useLanguage } from "../lib/i18n";
 
 export const Route = createFileRoute("/contact")({
   staticData: { sitemap: true },
-  head: () => ({ meta: [
-    { title: "Konsultasi Jasa Pembuatan Website — SenusaCorp" },
-    { name: "description", content: "Ceritakan kebutuhan website, brand, CRM, HRM, atau aplikasi bisnis Anda kepada SenusaCorp." },
-    { property: "og:title", content: "Mulai Proyek dengan SenusaCorp" },
-    { property: "og:description", content: "Share your project brief with our creative and digital team." },
-    { property: "og:url", content: "https://senusacorp.lovable.app/contact" }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
-  ], links: [{ rel: "canonical", href: "https://senusacorp.lovable.app/contact" }]}), component: Contact,
+  head:()=>pageHead({path:"/contact",title:"Konsultasi Pembuatan Website — Kontak SenusaCorp",description:"Ceritakan kebutuhan website, toko online, branding, CRM, atau HRM Anda. Kirim brief proyek dan tim SenusaCorp akan menyiapkan lingkup serta estimasi harga.",breadcrumbs:[{name:"Kontak",path:"/contact"}]}), component: Contact,
 });
 
 type Brief = { service: string; budget: string; timeline: string; name: string; email: string; phone: string; company: string; message: string };
