@@ -3,16 +3,61 @@ import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "../lib/i18n";
 import { assets, projects } from "../lib/site-data";
 
+const SITE = "https://senusacorp.lovable.app";
+
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
-  head: () => ({ meta: [
-    { title: "SenusaCorp — Creative & Digital Agency Indonesia" },
-    { name: "description", content: "Website, identitas brand, dan aplikasi bisnis yang dirancang dengan hati dan dibangun untuk bekerja." },
-    { property: "og:title", content: "SenusaCorp — Ideas made useful" },
-    { property: "og:description", content: "Creative and digital agency for websites, brands, CRM, and HRM." },
-    { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
-  ]}), component: Home,
+  head: () => ({
+    meta: [
+      { title: "Jasa Pembuatan Website Profesional Mulai Rp200 Ribu — SenusaCorp" },
+      { name: "description", content: "Jasa pembuatan website, web design, company profile, toko online, hingga aplikasi bisnis CRM & HRM untuk UMKM dan perusahaan Indonesia. Harga transparan mulai Rp200 ribu." },
+      { name: "keywords", content: "jasa pembuatan website, jasa website, web design, desain website, jasa buat website, jasa pembuatan website murah, website company profile, jasa website UMKM, pembuatan toko online, jasa aplikasi CRM HRM" },
+      { property: "og:title", content: "Jasa Pembuatan Website Profesional Mulai Rp200 Ribu — SenusaCorp" },
+      { property: "og:description", content: "Website, company profile, toko online, dan aplikasi bisnis untuk UMKM & perusahaan Indonesia. 17 karya live, harga jelas." },
+      { property: "og:url", content: SITE + "/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: SITE + "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "SenusaCorp",
+          url: SITE,
+          image: SITE + "/favicon.png",
+          description: "Jasa pembuatan website, web design, company profile, toko online, dan aplikasi bisnis CRM/HRM untuk UMKM, profesional, dan perusahaan di Indonesia.",
+          areaServed: "Indonesia",
+          serviceType: ["Jasa pembuatan website", "Web design", "Website company profile", "Toko online", "Aplikasi bisnis CRM & HRM"],
+          priceRange: "Rp200.000 - Rp15.000.000",
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Paket jasa pembuatan website",
+            itemListElement: [
+              { "@type": "Offer", name: "Quick Start", price: "200000", priceCurrency: "IDR", url: SITE + "/pricing" },
+              { "@type": "Offer", name: "Launch", price: "1500000", priceCurrency: "IDR", url: SITE + "/pricing" },
+              { "@type": "Offer", name: "Business", price: "4500000", priceCurrency: "IDR", url: SITE + "/pricing" },
+            ],
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "SenusaCorp",
+          url: SITE,
+          inLanguage: ["id", "en"],
+        }),
+      },
+    ],
+  }),
+  component: Home,
 });
+
 
 function Home() {
   const { language } = useLanguage(); const id = language === "id";
