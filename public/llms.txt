@@ -1,0 +1,39 @@
+# SenusaCorp
+
+> SenusaCorp adalah agensi kreatif digital Indonesia yang membuat website profesional, company profile, toko online, portofolio, dan aplikasi bisnis (CRM, HRM) untuk UMKM, profesional, dan perusahaan. Harga transparan mulai Rp200.000.
+
+SenusaCorp is an Indonesian creative digital agency building professional websites, company profiles, online stores, portfolio sites, and business apps (CRM, HRM) for small businesses, professionals, and companies. Transparent pricing from Rp200,000.
+
+## Layanan / Services
+
+- Jasa pembuatan website profesional (company profile, landing page, portofolio)
+- Web design & brand identity
+- Toko online / e-commerce
+- Aplikasi bisnis: CRM, HRM, dashboard internal
+- Digitalisasi UMKM Indonesia
+
+## Harga / Pricing
+
+- Quick Start — mulai Rp200.000: website satu halaman, siap online cepat
+- Launch — mulai Rp1.500.000: website bisnis lengkap beberapa halaman
+- Business — mulai Rp4.500.000: website + sistem bisnis, integrasi lanjutan
+- Custom App — sesuai kebutuhan: CRM, HRM, aplikasi internal
+
+Waktu pengerjaan umumnya 3–14 hari. Tanpa biaya tersembunyi.
+
+## Halaman utama / Key pages
+
+- [Beranda](https://senusacorp.my.id/): layanan, harga, dan alasan bisnis butuh website
+- [Layanan](https://senusacorp.my.id/services): brand, website, CRM & HRM
+- [Harga](https://senusacorp.my.id/pricing): paket dan rentang biaya
+- [Portofolio](https://senusacorp.my.id/work): 17 karya website yang bisa dibuka langsung
+- [Proses](https://senusacorp.my.id/process): cara kerja dari brief sampai peluncuran
+- [Tentang](https://senusacorp.my.id/about): profil studio
+- [Kontak](https://senusacorp.my.id/contact): konsultasi dan pengajuan brief
+- [Sitemap](https://senusacorp.my.id/sitemap.xml)
+
+## Catatan / Notes
+
+- Bahasa situs: Bahasa Indonesia (utama) dan English.
+- Wilayah layanan: Indonesia, dengan klien dari berbagai kota.
+- Setiap karya di halaman portofolio adalah website nyata yang dapat dikunjungi.
