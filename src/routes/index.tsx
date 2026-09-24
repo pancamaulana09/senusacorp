@@ -3,22 +3,15 @@ import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "../lib/i18n";
 import { assets, projects } from "../lib/site-data";
 
-const SITE = "https://senusacorp.lovable.app";
+import { pageHead, SITE_URL as SITE } from "../lib/seo";
+
+const homeHead = pageHead({ path: "/", title: "Jasa Pembuatan Website Profesional Mulai Rp200 Ribu — SenusaCorp", description: "Jasa pembuatan website, company profile, toko online, dan aplikasi bisnis CRM & HRM untuk UMKM dan perusahaan Indonesia. Harga jelas mulai Rp200 ribu." });
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
-    meta: [
-      { title: "Jasa Pembuatan Website Profesional Mulai Rp200 Ribu — SenusaCorp" },
-      { name: "description", content: "Jasa pembuatan website, web design, company profile, toko online, hingga aplikasi bisnis CRM & HRM untuk UMKM dan perusahaan Indonesia. Harga transparan mulai Rp200 ribu." },
-      { name: "keywords", content: "jasa pembuatan website, jasa website, web design, desain website, jasa buat website, jasa pembuatan website murah, website company profile, jasa website UMKM, pembuatan toko online, jasa aplikasi CRM HRM" },
-      { property: "og:title", content: "Jasa Pembuatan Website Profesional Mulai Rp200 Ribu — SenusaCorp" },
-      { property: "og:description", content: "Website, company profile, toko online, dan aplikasi bisnis untuk UMKM & perusahaan Indonesia. 17 karya live, harga jelas." },
-      { property: "og:url", content: SITE + "/" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: SITE + "/" }],
+    meta: homeHead.meta,
+    links: homeHead.links,
     scripts: [
       {
         type: "application/ld+json",
