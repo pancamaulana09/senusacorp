@@ -1,4 +1,4 @@
-export const SITE_URL = "https://senusacorp.lovable.app";
+export const SITE_URL = "https://senusacorp.my.id";
 export const SITE_NAME = "SenusaCorp";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og/senusacorp-og.jpg`;
 
