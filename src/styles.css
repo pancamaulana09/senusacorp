@@ -93,3 +93,12 @@ body{overflow-x:hidden}.site-header{height:72px;position:sticky;top:0;padding-in
 @media(max-width:850px){.blog-grid{grid-template-columns:1fr 1fr}.post-layout{grid-template-columns:1fr}.post-toc{position:static}}
 @media(max-width:520px){.blog-grid{grid-template-columns:1fr}.blog-card{min-height:0}.post-body{font-size:17px}}
 .blog-featured>p.post-meta{font-size:11px;opacity:.65}.post-body ul{list-style:disc}
+
+/* Blog cover imagery */
+.blog-featured-media{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:18px;margin-bottom:22px;display:block}
+.blog-card-media{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;margin-bottom:16px;display:block;transition:transform .5s ease}
+.blog-card:hover .blog-card-media{transform:scale(1.03)}
+.blog-card{overflow:hidden}
+.post-cover{margin:28px 0 0;padding:0}
+.post-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:20px;display:block}
+.post-cover figcaption{margin-top:10px;font-size:12px;opacity:.6}
