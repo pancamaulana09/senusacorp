@@ -1,3 +1,9 @@
+import coverBiaya from "../assets/blog/biaya-pembuatan-website-bisnis-indonesia-senusacorp.jpg";
+import coverWordpress from "../assets/blog/perbandingan-wordpress-vs-website-modern-senusacorp.jpg";
+import coverUmkm from "../assets/blog/manfaat-website-untuk-bisnis-dan-umkm-senusacorp.jpg";
+import coverSistem from "../assets/blog/sistem-aplikasi-bisnis-kustom-crm-hrm-senusacorp.jpg";
+import coverSeo from "../assets/blog/strategi-seo-website-bisnis-google-indonesia-senusacorp.jpg";
+
 export type Bi = { id: string; en: string };
 export type Block =
   | { type: "p"; text: Bi }
