@@ -20,6 +20,8 @@ export const Route = createFileRoute("/blog/$slug")({
       path: `/blog/${post.slug}`,
       title: post.seoTitle,
       description: post.seoDescription,
+      image: post.cover,
+      imageAlt: post.coverAlt.id,
       type: "article",
       breadcrumbs: [
         { name: "Blog", path: "/blog" },
