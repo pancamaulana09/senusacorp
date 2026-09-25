@@ -74,6 +74,15 @@ function BlogIndex() {
       <section className="section blog-section">
         {filter === "Semua" && (
           <Link to="/blog/$slug" params={{ slug: featured.slug }} className="blog-featured">
+            <img
+              className="blog-featured-media"
+              src={featured.cover}
+              alt={featured.coverAlt[language]}
+              width={1200}
+              height={675}
+              fetchPriority="high"
+              decoding="async"
+            />
             <small>{id ? "Artikel terbaru" : "Latest article"}</small>
             <h2>{featured.title[language]}</h2>
             <p>{featured.excerpt[language]}</p>
@@ -93,6 +102,15 @@ function BlogIndex() {
         <div className="blog-grid">
           {list.map((post) => (
             <Link key={post.slug} to="/blog/$slug" params={{ slug: post.slug }} className="blog-card">
+              <img
+                className="blog-card-media"
+                src={post.cover}
+                alt={post.coverAlt[language]}
+                width={1200}
+                height={675}
+                loading="lazy"
+                decoding="async"
+              />
               <PostMeta post={post} />
               <h3>{post.title[language]}</h3>
               <p>{post.excerpt[language]}</p>
