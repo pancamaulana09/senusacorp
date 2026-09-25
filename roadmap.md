@@ -15,4 +15,4 @@
 
 - [x] SEO kata kunci "jasa pembuatan website": title/description/keywords, canonical + og:url tiap halaman, JSON-LD ProfessionalService/WebSite/Organization/CreativeWork
 - [x] Baris brand klien (17 karya nyata) di homepage
-- [ ] Connect Google Search Console in new workspace
+- [x] Connect Google Search Console in new workspace
