@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "../lib/i18n";
-import { pageHead, SITE_URL } from "../lib/seo";
+import { absoluteUrl, pageHead, SITE_URL } from "../lib/seo";
 import { formatDate, getPost, posts } from "../lib/blog-data";
 import { waLink } from "../lib/contact";
 
@@ -20,6 +20,8 @@ export const Route = createFileRoute("/blog/$slug")({
       path: `/blog/${post.slug}`,
       title: post.seoTitle,
       description: post.seoDescription,
+      image: post.cover,
+      imageAlt: post.coverAlt.id,
       type: "article",
       breadcrumbs: [
         { name: "Blog", path: "/blog" },
@@ -34,6 +36,14 @@ export const Route = createFileRoute("/blog/$slug")({
         dateModified: post.date,
         inLanguage: "id-ID",
         keywords: post.keywords.join(", "),
+        image: {
+          "@type": "ImageObject",
+          url: absoluteUrl(post.cover),
+          contentUrl: absoluteUrl(post.cover),
+          width: 1200,
+          height: 675,
+          caption: post.coverAlt.id,
+        },
         mainEntityOfPage: url,
         url,
         author: { "@type": "Organization", name: "SenusaCorp", url: SITE_URL },
@@ -74,6 +84,10 @@ function BlogPost() {
         </p>
         <h1>{post.title[language]}</h1>
         <p className="post-lede">{post.excerpt[language]}</p>
+        <figure className="post-cover">
+          <img src={post.cover} alt={post.coverAlt[language]} width={1200} height={675} fetchPriority="high" decoding="async" />
+          <figcaption>{post.coverAlt[language]}</figcaption>
+        </figure>
       </header>
       <section className="section post-layout">
         <aside className="post-toc" aria-label={id ? "Daftar isi" : "Contents"}>
