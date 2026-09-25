@@ -17,4 +17,4 @@
 - [x] Baris brand klien (17 karya nyata) di homepage
 - [x] Connect Google Search Console in new workspace
 - [x] Blog page + 5 articles
-- [ ] Reconnect Google Search Console (new workspace, again)
+- [x] Reconnect Google Search Console (new workspace, again)
