@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "../lib/i18n";
-import { pageHead, SITE_URL } from "../lib/seo";
+import { absoluteUrl, pageHead, SITE_URL } from "../lib/seo";
 import { formatDate, getPost, posts } from "../lib/blog-data";
 import { waLink } from "../lib/contact";
 
@@ -36,6 +36,14 @@ export const Route = createFileRoute("/blog/$slug")({
         dateModified: post.date,
         inLanguage: "id-ID",
         keywords: post.keywords.join(", "),
+        image: {
+          "@type": "ImageObject",
+          url: absoluteUrl(post.cover),
+          contentUrl: absoluteUrl(post.cover),
+          width: 1200,
+          height: 675,
+          caption: post.coverAlt.id,
+        },
         mainEntityOfPage: url,
         url,
         author: { "@type": "Organization", name: "SenusaCorp", url: SITE_URL },
