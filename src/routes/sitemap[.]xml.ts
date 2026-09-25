@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { getRouterInstance } from "@tanstack/react-start";
 import { sitemapPathForLocation, sitemapStaticPaths, sitemapXML, isSitemapRouteIncluded, type SitemapEntry } from "@/lib/sitemap";
 import { projects } from "@/lib/site-data";
+import { posts } from "@/lib/blog-data";
 
 import { SITE_URL as BASE_URL } from "@/lib/seo";
 
@@ -23,6 +24,15 @@ export const Route = createFileRoute("/sitemap.xml")({
               hash: "",
             });
             const path = sitemapPathForLocation(router, location, projectRouteId);
+            if (path) entries.push({ path });
+          }
+        }
+
+        const postRouteId = "/blog/$slug";
+        if (isSitemapRouteIncluded(router.routesById[postRouteId])) {
+          for (const post of posts) {
+            const location = router.buildLocation({ to: "/blog/$slug", params: { slug: post.slug }, search: () => ({}), hash: "" });
+            const path = sitemapPathForLocation(router, location, postRouteId);
             if (path) entries.push({ path });
           }
         }

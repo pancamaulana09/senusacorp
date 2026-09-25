@@ -9,7 +9,7 @@ import iconAsset from "../assets/brand/senusa-icon.webp.asset.json";
 
 const nav = [
   ["/work", "Karya", "Work"], ["/services", "Layanan", "Services"], ["/process", "Proses", "Process"],
-  ["/pricing", "Harga", "Pricing"], ["/about", "Tentang", "About"],
+  ["/pricing", "Harga", "Pricing"], ["/about", "Tentang", "About"], ["/blog", "Blog", "Blog"],
 ] as const;
 
 function Header() {
