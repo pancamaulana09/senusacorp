@@ -33,7 +33,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           for (const post of posts) {
             const location = router.buildLocation({ to: "/blog/$slug", params: { slug: post.slug }, search: () => ({}), hash: "" });
             const path = sitemapPathForLocation(router, location, postRouteId);
-            if (path) entries.push({ path });
+            if (path) entries.push({ path, lastmod: post.date, images: [{ loc: post.cover, title: post.title.id, caption: post.coverAlt.id }] });
           }
         }
 

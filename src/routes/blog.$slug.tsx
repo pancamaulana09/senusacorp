@@ -84,6 +84,10 @@ function BlogPost() {
         </p>
         <h1>{post.title[language]}</h1>
         <p className="post-lede">{post.excerpt[language]}</p>
+        <figure className="post-cover">
+          <img src={post.cover} alt={post.coverAlt[language]} width={1200} height={675} fetchPriority="high" decoding="async" />
+          <figcaption>{post.coverAlt[language]}</figcaption>
+        </figure>
       </header>
       <section className="section post-layout">
         <aside className="post-toc" aria-label={id ? "Daftar isi" : "Contents"}>
