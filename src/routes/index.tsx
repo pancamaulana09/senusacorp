@@ -22,7 +22,11 @@ export const Route = createFileRoute("/")({
           url: SITE,
           image: SITE + "/favicon.png",
           description: "Jasa pembuatan website, web design, company profile, toko online, dan aplikasi bisnis CRM/HRM untuk UMKM, profesional, dan perusahaan di Indonesia.",
-          areaServed: "Indonesia",
+          areaServed: ["Surabaya", "Jawa Timur", "Indonesia"],
+          telephone: "+6285730253097",
+          address: { "@type": "PostalAddress", addressLocality: "Surabaya", addressRegion: "Jawa Timur", addressCountry: "ID" },
+          openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], opens: "09:00", closes: "18:00" }],
+          contactPoint: { "@type": "ContactPoint", telephone: "+6285730253097", contactType: "customer service", areaServed: "ID", availableLanguage: ["Indonesian", "English"] },
           serviceType: ["Jasa pembuatan website", "Web design", "Website company profile", "Toko online", "Aplikasi bisnis CRM & HRM"],
           priceRange: "Rp200.000 - Rp15.000.000",
           hasOfferCatalog: {
