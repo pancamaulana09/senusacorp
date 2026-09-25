@@ -22,6 +22,8 @@ export type Post = {
   seoTitle: string;
   seoDescription: string;
   keywords: string[];
+  cover: string;
+  coverAlt: Bi;
   body: Block[];
 };
 
