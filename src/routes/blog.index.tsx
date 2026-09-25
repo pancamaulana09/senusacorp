@@ -15,7 +15,7 @@ export const Route = createFileRoute("/blog/")({
       description:
         "Artikel praktis seputar biaya pembuatan website, sistem aplikasi bisnis CRM & HRM, perbandingan teknologi, dan strategi SEO untuk UMKM dan perusahaan di Indonesia.",
       breadcrumbs: [{ name: "Blog", path: "/blog" }],
-      jsonLd: {
+      jsonLd: [{
         "@context": "https://schema.org",
         "@type": "Blog",
         name: "Blog SenusaCorp",
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/blog/")({
           url: `${SITE_URL}/blog/${post.slug}`,
           datePublished: post.date,
         })),
-      },
+      }],
     }),
   component: BlogIndex,
 });
@@ -55,7 +55,8 @@ function BlogIndex() {
   const id = language === "id";
   const [filter, setFilter] = useState<(typeof categories)[number]>("Semua");
   const sorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
-  const [featured, ...rest] = sorted;
+  const featured = sorted[0]!;
+  const rest = sorted.slice(1);
   const list = filter === "Semua" ? rest : sorted.filter((p) => p.categoryKey === filter);
 
   return (

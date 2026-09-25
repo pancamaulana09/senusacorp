@@ -25,7 +25,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { name: "Blog", path: "/blog" },
         { name: post.title.id, path: `/blog/${post.slug}` },
       ],
-      jsonLd: {
+      jsonLd: [{
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         headline: post.title.id,
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/blog/$slug")({
         url,
         author: { "@type": "Organization", name: "SenusaCorp", url: SITE_URL },
         publisher: { "@type": "Organization", name: "SenusaCorp", logo: { "@type": "ImageObject", url: `${SITE_URL}/icon-512.png` } },
-      },
+      }],
     });
   },
   notFoundComponent: PostNotFound,
