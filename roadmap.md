@@ -18,5 +18,5 @@
 - [x] Connect Google Search Console in new workspace
 - [x] Blog page + 5 articles
 - [x] Reconnect Google Search Console (new workspace, again)
-- [ ] Blog cover images + image SEO (alt, ImageObject, og:image, image sitemap)
-- [ ] Reconnect Google Search Console (workspace move, again)
+- [x] Blog cover images + image SEO (alt, ImageObject, og:image, image sitemap)
+- [x] Reconnect Google Search Console (workspace move, again)
