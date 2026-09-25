@@ -51,6 +51,8 @@ export const posts: Post[] = [
     seoDescription:
       "Panduan biaya jasa pembuatan website bisnis di Indonesia 2026: kisaran harga, rincian komponen, biaya domain dan hosting, serta cara memilih paket tanpa biaya tersembunyi.",
     keywords: ["biaya pembuatan website", "jasa pembuatan website", "harga website bisnis"],
+    cover: coverBiaya,
+    coverAlt: { id: "Ilustrasi rincian biaya pembuatan website bisnis di Indonesia oleh SenusaCorp", en: "Illustration of business website cost breakdown in Indonesia by SenusaCorp" },
     body: [
       p(
         "Pertanyaan pertama hampir setiap pemilik usaha sama: berapa sebenarnya biaya membuat website bisnis? Jawabannya sangat bervariasi karena yang dijual bukan sekadar halaman, melainkan waktu perancangan, kualitas rekayasa, dan dukungan setelah tayang.",
@@ -117,6 +119,8 @@ export const posts: Post[] = [
     seoDescription:
       "Perbandingan WordPress dan website modern tanpa plugin: kecepatan loading, keamanan, biaya perawatan, skalabilitas, dan kapan sebaiknya memilih masing-masing untuk bisnis.",
     keywords: ["wordpress vs custom", "website cepat", "keamanan website bisnis"],
+    cover: coverWordpress,
+    coverAlt: { id: "Perbandingan performa WordPress dan website modern buatan SenusaCorp", en: "Performance comparison between WordPress and a modern SenusaCorp website" },
     body: [
       p(
         "WordPress menguasai sebagian besar internet dan tetap masuk akal untuk banyak kebutuhan. Namun sejak kecepatan halaman menjadi faktor peringkat Google dan serangan otomatis semakin sering, pertanyaannya bukan lagi mana yang populer, melainkan mana yang lebih murah dirawat selama tiga tahun.",
@@ -166,6 +170,8 @@ export const posts: Post[] = [
     seoDescription:
       "Alasan praktis mengapa UMKM dan bisnis Indonesia membutuhkan website sendiri: kredibilitas, ditemukan di Google, penjualan 24 jam, dan kepemilikan data pelanggan.",
     keywords: ["pentingnya website untuk bisnis", "website umkm", "digitalisasi usaha kecil"],
+    cover: coverUmkm,
+    coverAlt: { id: "Ilustrasi manfaat website sendiri untuk bisnis dan UMKM di Indonesia", en: "Illustration of the benefits of owning a website for Indonesian small businesses" },
     body: [
       p(
         "Banyak usaha di Indonesia berjalan baik hanya dengan Instagram dan WhatsApp. Masalahnya muncul ketika calon pembeli besar, mitra, atau instansi mencari informasi resmi dan tidak menemukan apa pun selain akun media sosial.",
@@ -208,6 +214,8 @@ export const posts: Post[] = [
     seoDescription:
       "Panduan membangun sistem aplikasi bisnis kustom: CRM, HRM, dan operasional internal. Fitur wajib, hak akses pengguna, keamanan data, biaya, dan waktu pengerjaan.",
     keywords: ["pembuatan aplikasi bisnis", "sistem crm indonesia", "aplikasi hrm kustom"],
+    cover: coverSistem,
+    coverAlt: { id: "Ilustrasi sistem aplikasi bisnis kustom CRM dan HRM dengan hak akses bertingkat", en: "Illustration of a custom CRM and HRM business system with layered access control" },
     body: [
       p(
         "Ketika tim Anda mengelola pelanggan di spreadsheet, absensi di grup pesan, dan laporan di berkas terpisah, biaya sesungguhnya bukan pada perangkat lunak, melainkan pada jam kerja yang hilang dan kesalahan pencatatan.",
