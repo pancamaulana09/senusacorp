@@ -267,6 +267,8 @@ export const posts: Post[] = [
     seoDescription:
       "Panduan SEO website bisnis di Indonesia: riset kata kunci, struktur halaman, kecepatan loading, Google Search Console, SEO lokal, dan cara muncul di pencarian AI.",
     keywords: ["seo website bisnis", "cara muncul di google", "seo lokal indonesia"],
+    cover: coverSeo,
+    coverAlt: { id: "Ilustrasi strategi SEO agar website bisnis muncul di halaman pertama Google", en: "Illustration of SEO strategy to rank a business website on Google's first page" },
     body: [
       p(
         "Website yang bagus tanpa pengunjung sama saja dengan toko indah di gang buntu. SEO adalah pekerjaan memindahkan toko itu ke jalan yang ramai, dan sebagian besar langkahnya bisa dikerjakan sendiri.",
