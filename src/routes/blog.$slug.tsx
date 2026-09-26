@@ -41,7 +41,7 @@ export const Route = createFileRoute("/blog/$slug")({
           url: absoluteUrl(post.cover),
           contentUrl: absoluteUrl(post.cover),
           width: 1200,
-          height: 675,
+          height: 688,
           caption: post.coverAlt.id,
         },
         mainEntityOfPage: url,
@@ -66,8 +66,9 @@ function PostNotFound() {
 
 function BlogPost() {
   const { slug } = Route.useLoaderData();
-  const post = getPost(slug)!;
+  const post = getPost(slug);
   const { language } = useLanguage();
+  if (!post) return <PostNotFound />;
   const id = language === "id";
   const headings = post.body.filter((b) => b.type === "h2");
   const related = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
@@ -85,7 +86,7 @@ function BlogPost() {
         <h1>{post.title[language]}</h1>
         <p className="post-lede">{post.excerpt[language]}</p>
         <figure className="post-cover">
-          <img src={post.cover} alt={post.coverAlt[language]} width={1200} height={675} fetchPriority="high" decoding="async" />
+          <img src={post.cover} alt={post.coverAlt[language]} width={1200} height={688} fetchPriority="high" decoding="async" />
           <figcaption>{post.coverAlt[language]}</figcaption>
         </figure>
       </header>
