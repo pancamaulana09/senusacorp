@@ -79,7 +79,7 @@ function BlogIndex() {
               src={featured.cover}
               alt={featured.coverAlt[language]}
               width={1200}
-              height={675}
+               height={688}
               fetchPriority="high"
               decoding="async"
             />
@@ -107,7 +107,7 @@ function BlogIndex() {
                 src={post.cover}
                 alt={post.coverAlt[language]}
                 width={1200}
-                height={675}
+                 height={688}
                 loading="lazy"
                 decoding="async"
               />

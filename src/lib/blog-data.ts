@@ -478,13 +478,13 @@ export const posts: Post[] = [
       ]),
       h2("Bukti kredibilitas yang dicari klien korporat", "Credibility proof corporate clients look for"),
       p(
-        "Departemen pengadaan biasanya memeriksa tiga hal: legalitas usaha, pengalaman proyek sejenis, dan kejelasan alur kerja. Cantumkan keduanya secara terbuka. Satu halaman proses kerja yang menjelaskan tahapan dan waktu pengerjaan sering lebih meyakinkan daripada sepuluh testimoni tanpa konteks.",
+        "Departemen pengadaan biasanya memeriksa tiga hal: legalitas usaha, pengalaman proyek sejenis, dan kejelasan alur kerja. Cantumkan ketiganya secara terbuka. Satu halaman proses kerja yang menjelaskan tahapan dan waktu pengerjaan sering lebih meyakinkan daripada sepuluh testimoni tanpa konteks.",
         "Procurement teams usually check three things: legal standing, experience on similar projects, and clarity of process. State them openly. A single process page explaining stages and timelines is often more convincing than ten testimonials without context.",
       ),
       h2("Hal teknis yang tidak boleh diabaikan", "Technical points you cannot skip"),
       list([
         ["Tampilan rapi di ponsel, karena sebagian besar kunjungan pertama datang dari ponsel.", "A tidy phone layout, because most first visits come from phones."],
-        ["Halaman terbuka di bawah dua detik agar pengunjung tidak pergi.", "Pages opening in under two seconds so visitors do not leave."],
+        ["Halaman utama cepat terbuka, dengan gambar dan skrip yang tidak menghambat isi.", "A fast-loading home page, with images and scripts that do not delay the main content."],
         ["Dua bahasa bila Anda melayani klien luar negeri.", "Two languages if you serve overseas clients."],
         ["Panel pengelolaan isi agar tim Anda bisa memperbarui sendiri.", "A content panel so your own team can publish updates."],
         ["Formulir yang masuk langsung ke surel atau WhatsApp penanggung jawab.", "Forms that land directly in the responsible person's email or WhatsApp."],
