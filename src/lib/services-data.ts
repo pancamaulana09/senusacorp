@@ -228,7 +228,7 @@ export const services: Service[] = [
       { name: c("CRM / HRM", "CRM / HRM"), price: c("Mulai Rp9.000.000", "From Rp9,000,000").id, priceValue: 9000000, forWho: c("Tim penjualan atau SDM", "Sales or HR teams"), includes: [c("Manajemen data pelanggan atau karyawan", "Customer or employee data management"), c("Hak akses bertingkat", "Role-based access"), c("Ekspor Excel/PDF & catatan aktivitas", "Excel/PDF export & activity log")] },
       { name: c("Sistem Kustom", "Custom System"), price: c("Penawaran khusus", "Custom quote").id, priceValue: 0, forWho: c("Multi-divisi & integrasi", "Multi-division & integrations"), includes: [c("Beberapa modul terhubung", "Multiple connected modules"), c("Integrasi sistem yang sudah ada", "Integration with existing systems"), c("Perjanjian kerahasiaan (NDA)", "Non-disclosure agreement (NDA)")] },
     ],
-    projectSlugs: ["arqive", "fenomena-bike", "verdure-house"],
+    projectSlugs: ["arqive", "fenomena-bike", "virel-house"],
     faq: [
       { q: c("Apakah data perusahaan kami aman?", "Is our company data safe?"), a: c("Data disimpan dengan sambungan terenkripsi, hak akses bertingkat, dan pencadangan harian. Kami juga siap menandatangani NDA.", "Data is stored with encrypted connections, role-based access, and daily backups. We are also ready to sign an NDA.") },
       { q: c("Bisa dikembangkan bertahap?", "Can it be built in stages?"), a: c("Bisa. Kami mulai dari modul yang paling mendesak, lalu menambah modul lain setelah tim terbiasa.", "Yes. We start with the most urgent module, then add others once the team settles in.") },

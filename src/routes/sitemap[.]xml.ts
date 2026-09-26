@@ -3,6 +3,7 @@ import { getRouterInstance } from "@tanstack/react-start";
 import { sitemapPathForLocation, sitemapStaticPaths, sitemapXML, isSitemapRouteIncluded, type SitemapEntry } from "@/lib/sitemap";
 import { projects } from "@/lib/site-data";
 import { posts } from "@/lib/blog-data";
+import { services } from "@/lib/services-data";
 
 import { SITE_URL as BASE_URL } from "@/lib/seo";
 
@@ -34,6 +35,15 @@ export const Route = createFileRoute("/sitemap.xml")({
             const location = router.buildLocation({ to: "/blog/$slug", params: { slug: post.slug }, search: () => ({}), hash: "" });
             const path = sitemapPathForLocation(router, location, postRouteId);
             if (path) entries.push({ path, lastmod: post.date, images: [{ loc: post.cover, title: post.title.id, caption: post.coverAlt.id }] });
+          }
+        }
+
+        const serviceRouteId = "/services/$slug";
+        if (isSitemapRouteIncluded(router.routesById[serviceRouteId])) {
+          for (const svc of services) {
+            const location = router.buildLocation({ to: "/services/$slug", params: { slug: svc.slug }, search: () => ({}), hash: "" });
+            const path = sitemapPathForLocation(router, location, serviceRouteId);
+            if (path) entries.push({ path, images: [{ loc: svc.cover, title: svc.seoTitle, caption: svc.coverAlt.id }] });
           }
         }
 

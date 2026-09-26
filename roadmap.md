@@ -22,3 +22,5 @@
 - [x] Reconnect Google Search Console (workspace move, again)
 - [x] Add four bilingual blog articles and replace all blog covers with relevant realistic photography
 - [x] Connect Google Search Console in the current workspace
+- [ ] Service detail pages (/services/$slug) with realistic photos, examples, pricing, Service schema
+- [ ] Connect Google Search Console (workspace move)
