@@ -20,3 +20,5 @@
 - [x] Reconnect Google Search Console (new workspace, again)
 - [x] Blog cover images + image SEO (alt, ImageObject, og:image, image sitemap)
 - [x] Reconnect Google Search Console (workspace move, again)
+- [ ] Add four bilingual blog articles and replace all blog covers with relevant realistic photography
+- [ ] Connect Google Search Console in the current workspace
