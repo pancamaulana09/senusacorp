@@ -315,6 +315,248 @@ export const posts: Post[] = [
       ),
     ],
   },
+  {
+    slug: "tips-memilih-jasa-pembuatan-website-terpercaya",
+    categoryKey: "Panduan Bisnis",
+    category: { id: "Panduan Bisnis", en: "Business Guide" },
+    date: "2026-09-23",
+    readMinutes: 7,
+    title: {
+      id: "Cara Memilih Jasa Pembuatan Website Terpercaya di Indonesia",
+      en: "How to Choose a Trustworthy Website Agency in Indonesia",
+    },
+    excerpt: {
+      id: "Daftar periksa sebelum membayar: portofolio asli, kepemilikan kode, skema pembayaran, garansi, dan tanda bahaya vendor bermasalah.",
+      en: "A checklist before you pay: real portfolios, code ownership, payment terms, warranty, and the red flags of a risky vendor.",
+    },
+    seoTitle: "Cara Memilih Jasa Pembuatan Website Terpercaya — SenusaCorp",
+    seoDescription:
+      "Panduan memilih jasa pembuatan website terpercaya di Indonesia: cek portofolio asli, kepemilikan kode sumber, skema pembayaran, garansi perbaikan, dan tanda bahaya vendor.",
+    keywords: ["jasa pembuatan website terpercaya", "memilih vendor website", "jasa website profesional"],
+    cover: coverMemilih,
+    coverAlt: {
+      id: "Pemilik bisnis memeriksa portofolio dan penawaran jasa pembuatan website di meja rapat",
+      en: "Business owner reviewing website agency portfolios and proposals at a meeting table",
+    },
+    body: [
+      p(
+        "Memilih vendor website mirip memilih kontraktor bangunan. Hasilnya baru terasa setelah beberapa bulan, dan biaya memperbaiki pilihan yang salah selalu lebih besar daripada selisih harga di awal.",
+        "Choosing a website vendor is like choosing a builder. You only feel the result months later, and fixing a wrong choice always costs more than the price difference at the start.",
+      ),
+      h2("1. Periksa portofolio yang bisa dibuka", "1. Check portfolios you can actually open"),
+      p(
+        "Minta tautan website yang sedang tayang, bukan sekadar gambar tampilan. Buka di ponsel, perhatikan kecepatan membuka halaman, dan lihat apakah menu serta formulir benar-benar berfungsi. Gambar bisa dibuat siapa saja; website yang hidup tidak bisa dipalsukan.",
+        "Ask for links to live websites, not just mockup images. Open them on a phone, watch how fast they load, and check whether menus and forms really work. Anyone can produce a picture; a live site cannot be faked.",
+      ),
+      h2("2. Pastikan kepemilikan kode dan akses", "2. Confirm code ownership and access"),
+      list([
+        ["Siapa pemilik kode sumber setelah proyek selesai.", "Who owns the source code once the project ends."],
+        ["Apakah domain dan hosting terdaftar atas nama usaha Anda.", "Whether the domain and hosting are registered in your business name."],
+        ["Apakah Anda menerima akses penuh ke panel pengelolaan isi.", "Whether you receive full access to the content management panel."],
+        ["Apakah Anda bisa pindah vendor tanpa membangun ulang dari nol.", "Whether you can switch vendors without rebuilding from scratch."],
+      ]),
+      h2("3. Pahami skema pembayaran dan lingkup", "3. Understand payment terms and scope"),
+      p(
+        "Skema yang sehat biasanya terbagi dua atau tiga tahap dan tertulis jelas: berapa halaman, berapa kali revisi, apa saja yang termasuk, dan apa yang dihitung tambahan. Penawaran tanpa rincian lingkup hampir selalu berakhir dengan tagihan susulan.",
+        "Healthy terms split into two or three stages and state clearly: how many pages, how many revisions, what is included, and what counts as extra. A quote without scope detail almost always ends in follow-up invoices.",
+      ),
+      h2("4. Tanyakan garansi dan dukungan", "4. Ask about warranty and support"),
+      p(
+        "Perbaikan kesalahan setelah tayang sebaiknya ditanggung selama minimal satu bulan. Tanyakan juga jalur komunikasi setelah proyek selesai dan berapa lama biasanya permintaan perubahan kecil dikerjakan.",
+        "Bug fixes after launch should be covered for at least a month. Also ask what the support channel is after handover, and how long small change requests usually take.",
+      ),
+      h2("Tanda bahaya yang sebaiknya Anda hindari", "Red flags worth avoiding"),
+      list([
+        ["Menolak memperlihatkan website yang sedang tayang.", "Refusing to show any live website."],
+        ["Meminta pelunasan penuh sebelum pekerjaan dimulai.", "Asking for full payment before work begins."],
+        ["Menjanjikan peringkat satu Google dalam hitungan hari.", "Promising a number one Google ranking within days."],
+        ["Tidak bersedia menulis lingkup pekerjaan secara tertulis.", "Unwilling to put the scope of work in writing."],
+      ]),
+      quote(
+        "Vendor yang baik menjelaskan batas pekerjaannya sejak awal, bukan hanya kelebihannya.",
+        "A good vendor explains the limits of the work upfront, not only its strengths.",
+      ),
+    ],
+  },
+  {
+    slug: "toko-online-sendiri-vs-marketplace",
+    categoryKey: "Panduan Bisnis",
+    category: { id: "Panduan Bisnis", en: "Business Guide" },
+    date: "2026-09-24",
+    readMinutes: 8,
+    title: {
+      id: "Toko Online Sendiri vs Marketplace: Mana yang Lebih Menguntungkan?",
+      en: "Your Own Online Store vs a Marketplace: Which Is More Profitable?",
+    },
+    excerpt: {
+      id: "Perbandingan margin, biaya komisi, kepemilikan data pelanggan, dan strategi menggabungkan keduanya agar brand Anda tumbuh.",
+      en: "Comparing margins, commission fees, customer data ownership, and how to combine both channels so your brand grows.",
+    },
+    seoTitle: "Toko Online Sendiri vs Marketplace untuk Brand — SenusaCorp",
+    seoDescription:
+      "Perbandingan toko online sendiri dan marketplace: biaya komisi, margin keuntungan, kepemilikan data pelanggan, biaya iklan, dan strategi menggabungkan keduanya untuk brand.",
+    keywords: ["toko online sendiri", "jasa pembuatan toko online", "marketplace vs website"],
+    cover: coverToko,
+    coverAlt: {
+      id: "Meja pengemasan brand dengan paket siap kirim dan laptop menampilkan daftar pesanan toko online",
+      en: "Brand packing table with parcels ready to ship and a laptop showing online store orders",
+    },
+    body: [
+      p(
+        "Marketplace memberi Anda pengunjung sejak hari pertama. Toko online sendiri memberi Anda margin dan data pelanggan. Keduanya bukan lawan, tetapi peran keduanya sangat berbeda dan sebaiknya tidak tertukar.",
+        "A marketplace gives you visitors from day one. Your own store gives you margin and customer data. They are not rivals, but their roles differ sharply and should not be confused.",
+      ),
+      h2("Hitung ulang margin Anda", "Recalculate your margin"),
+      p(
+        "Komisi marketplace, biaya program gratis ongkir, dan potongan kampanye diskon bisa memangkas margin cukup dalam. Pada produk dengan margin tipis, selisih tersebut sering menentukan untung atau rugi. Di toko sendiri, biaya utama Anda adalah pembuatan awal dan biaya transaksi pembayaran.",
+        "Marketplace commissions, free-shipping programmes, and campaign discounts can cut deeply into margin. On thin-margin products, that difference often decides profit or loss. On your own store, the main costs are the initial build and payment processing fees.",
+      ),
+      h2("Data pelanggan adalah aset jangka panjang", "Customer data is the long-term asset"),
+      p(
+        "Di marketplace, pembeli adalah pelanggan platform. Di toko sendiri, Anda memiliki nomor kontak, riwayat pembelian, dan izin mengirim penawaran ulang. Pembeli kedua dan ketiga jauh lebih murah didapat daripada pembeli pertama, dan itu hanya mungkin bila datanya milik Anda.",
+        "On a marketplace, the buyer belongs to the platform. On your own store, you hold the contact details, purchase history, and permission to send repeat offers. Second and third purchases are far cheaper to win than the first, and only possible when the data is yours.",
+      ),
+      h2("Kapan sebaiknya memakai masing-masing", "When to use each"),
+      list([
+        ["Marketplace: menguji produk baru, menjangkau pembeli yang belum mengenal brand, dan memanfaatkan kampanye tanggal kembar.", "Marketplace: testing new products, reaching buyers who do not know your brand, and riding campaign dates."],
+        ["Toko sendiri: penjualan berulang, produk eksklusif, paket bundling, dan pelanggan yang datang dari iklan atau media sosial Anda.", "Own store: repeat sales, exclusive products, bundles, and customers arriving from your own ads or social media."],
+      ]),
+      h2("Strategi menggabungkan keduanya", "A strategy that combines both"),
+      p(
+        "Gunakan marketplace sebagai etalase penemuan, dan arahkan pembeli ke toko sendiri untuk pembelian berikutnya lewat kartu ucapan di dalam paket, program keanggotaan, atau penawaran khusus. Toko sendiri juga menjadi rujukan kredibilitas saat calon mitra atau reseller memeriksa brand Anda.",
+        "Use the marketplace as a discovery shelf, then guide buyers to your own store for the next purchase through a thank-you card in the parcel, a membership scheme, or a special offer. Your own store also becomes the credibility reference when partners or resellers check your brand.",
+      ),
+      h2("Fitur yang wajib ada di toko sendiri", "Features your own store must have"),
+      list([
+        ["Katalog produk dengan varian, stok, dan foto yang cepat dimuat.", "A product catalogue with variants, stock, and fast-loading photos."],
+        ["Pembayaran otomatis melalui transfer, kartu, atau kode QR.", "Automatic payments via transfer, card, or QR code."],
+        ["Perhitungan ongkos kirim otomatis sesuai alamat pembeli.", "Automatic shipping cost calculation based on the buyer's address."],
+        ["Notifikasi pesanan lewat WhatsApp untuk Anda dan pembeli.", "Order notifications on WhatsApp for both you and the buyer."],
+        ["Laporan penjualan sederhana yang bisa diekspor.", "Simple, exportable sales reports."],
+      ]),
+      quote(
+        "Marketplace menyewakan pelanggan kepada Anda. Toko sendiri membuat pelanggan menjadi milik Anda.",
+        "A marketplace rents customers to you. Your own store makes them yours.",
+      ),
+    ],
+  },
+  {
+    slug: "fitur-wajib-website-company-profile",
+    categoryKey: "Sistem & Teknologi",
+    category: { id: "Sistem & Teknologi", en: "Systems & Technology" },
+    date: "2026-09-25",
+    readMinutes: 7,
+    title: {
+      id: "Fitur Wajib Website Company Profile Perusahaan Modern",
+      en: "Must-Have Features of a Modern Company Profile Website",
+    },
+    excerpt: {
+      id: "Struktur halaman yang meyakinkan klien korporat: profil, layanan terstruktur, bukti kredibilitas, dan jalur kontak yang cepat dibalas.",
+      en: "The page structure that convinces corporate clients: profile, structured services, credibility proof, and fast contact paths.",
+    },
+    seoTitle: "Fitur Wajib Website Company Profile Perusahaan — SenusaCorp",
+    seoDescription:
+      "Daftar fitur wajib website company profile perusahaan modern: struktur halaman, profil legalitas, katalog layanan, studi kasus, formulir kontak, dan kesiapan multi-bahasa.",
+    keywords: ["website company profile", "jasa company profile perusahaan", "struktur website perusahaan"],
+    cover: coverProfile,
+    coverAlt: {
+      id: "Dua profesional meninjau tampilan website company profile perusahaan di layar besar ruang rapat",
+      en: "Two professionals reviewing a company profile website on a large meeting room screen",
+    },
+    body: [
+      p(
+        "Website company profile bukan brosur digital. Ia adalah dokumen penilaian: calon klien, mitra, dan bahkan calon karyawan memutuskan seberapa serius perusahaan Anda dalam waktu kurang dari satu menit membaca.",
+        "A company profile website is not a digital brochure. It is an assessment document: prospective clients, partners, and even job candidates decide how serious your company is in under a minute of reading.",
+      ),
+      h2("Struktur halaman yang terbukti bekerja", "A page structure that works"),
+      list([
+        ["Beranda dengan satu kalimat jelas tentang apa yang Anda kerjakan dan untuk siapa.", "A home page with one clear sentence about what you do and for whom."],
+        ["Halaman layanan terpisah per lini bisnis, bukan satu halaman berisi semuanya.", "Separate service pages per business line, not one page listing everything."],
+        ["Halaman tentang berisi sejarah singkat, nilai kerja, dan legalitas usaha.", "An about page with a short history, working values, and legal standing."],
+        ["Studi kasus atau portofolio dengan hasil yang dapat diperiksa.", "Case studies or a portfolio with verifiable results."],
+        ["Halaman kontak dengan formulir, WhatsApp, dan domisili yang jelas.", "A contact page with a form, WhatsApp, and a clear location."],
+      ]),
+      h2("Bukti kredibilitas yang dicari klien korporat", "Credibility proof corporate clients look for"),
+      p(
+        "Departemen pengadaan biasanya memeriksa tiga hal: legalitas usaha, pengalaman proyek sejenis, dan kejelasan alur kerja. Cantumkan keduanya secara terbuka. Satu halaman proses kerja yang menjelaskan tahapan dan waktu pengerjaan sering lebih meyakinkan daripada sepuluh testimoni tanpa konteks.",
+        "Procurement teams usually check three things: legal standing, experience on similar projects, and clarity of process. State them openly. A single process page explaining stages and timelines is often more convincing than ten testimonials without context.",
+      ),
+      h2("Hal teknis yang tidak boleh diabaikan", "Technical points you cannot skip"),
+      list([
+        ["Tampilan rapi di ponsel, karena sebagian besar kunjungan pertama datang dari ponsel.", "A tidy phone layout, because most first visits come from phones."],
+        ["Halaman terbuka di bawah dua detik agar pengunjung tidak pergi.", "Pages opening in under two seconds so visitors do not leave."],
+        ["Dua bahasa bila Anda melayani klien luar negeri.", "Two languages if you serve overseas clients."],
+        ["Panel pengelolaan isi agar tim Anda bisa memperbarui sendiri.", "A content panel so your own team can publish updates."],
+        ["Formulir yang masuk langsung ke surel atau WhatsApp penanggung jawab.", "Forms that land directly in the responsible person's email or WhatsApp."],
+      ]),
+      h2("Kesalahan yang paling sering terjadi", "The most common mistakes"),
+      p(
+        "Menulis profil panjang tentang perusahaan tetapi tidak menjelaskan masalah apa yang Anda selesaikan. Menyembunyikan kontak di halaman paling bawah. Memakai foto stok yang sama dengan pesaing. Semua itu membuat perusahaan terlihat sama dengan yang lain, padahal pembeda Anda sebenarnya ada.",
+        "Writing a long profile about the company without explaining what problem you solve. Hiding contact details at the very bottom. Using the same stock photos as competitors. All of it makes a company look interchangeable when its differentiator actually exists.",
+      ),
+      quote(
+        "Klien korporat tidak membeli kalimat yang indah. Mereka membeli kejelasan.",
+        "Corporate clients do not buy beautiful sentences. They buy clarity.",
+      ),
+    ],
+  },
+  {
+    slug: "kecepatan-loading-website-dan-penjualan",
+    categoryKey: "SEO & Pertumbuhan",
+    category: { id: "SEO & Pertumbuhan", en: "SEO & Growth" },
+    date: "2026-09-26",
+    readMinutes: 6,
+    title: {
+      id: "Pengaruh Kecepatan Loading Website terhadap Penjualan Anda",
+      en: "How Website Loading Speed Affects Your Sales",
+    },
+    excerpt: {
+      id: "Setiap detik tambahan membuat sebagian pengunjung pergi. Ini cara mengukur kecepatan website dan memperbaikinya tanpa membangun ulang.",
+      en: "Every extra second sends visitors away. Here is how to measure your site speed and fix it without a rebuild.",
+    },
+    seoTitle: "Kecepatan Loading Website dan Pengaruhnya ke Penjualan — SenusaCorp",
+    seoDescription:
+      "Pengaruh kecepatan loading website terhadap penjualan dan peringkat Google: cara mengukur Core Web Vitals, penyebab website lambat, dan langkah perbaikan yang efektif.",
+    keywords: ["kecepatan loading website", "website lambat", "core web vitals"],
+    cover: coverSpeed,
+    coverAlt: {
+      id: "Laptop dan ponsel menampilkan pengukuran kecepatan membuka halaman website di meja kerja",
+      en: "Laptop and phone showing website page speed measurements on a work desk",
+    },
+    body: [
+      p(
+        "Kecepatan bukan urusan teknis semata. Ia adalah biaya yang tidak terlihat: pengunjung yang menutup halaman sebelum melihat produk Anda tidak pernah muncul sebagai keluhan, hanya sebagai penjualan yang tidak terjadi.",
+        "Speed is not merely a technical matter. It is an invisible cost: visitors who close the page before seeing your product never appear as complaints, only as sales that never happened.",
+      ),
+      h2("Apa yang sebenarnya diukur Google", "What Google actually measures"),
+      list([
+        ["Waktu sampai isi utama tampil, idealnya di bawah 2,5 detik.", "Time until the main content appears, ideally under 2.5 seconds."],
+        ["Kestabilan tampilan, agar tombol tidak bergeser saat halaman dimuat.", "Layout stability, so buttons do not shift while the page loads."],
+        ["Kecepatan halaman merespons sentuhan atau klik pertama.", "How quickly the page responds to the first tap or click."],
+      ]),
+      h2("Penyebab paling umum website lambat", "The most common causes of a slow site"),
+      list([
+        ["Gambar berukuran jutaan piksel yang diunggah apa adanya.", "Huge images uploaded straight from the camera."],
+        ["Terlalu banyak plugin dan skrip pelacak yang berjalan bersamaan.", "Too many plugins and tracking scripts running at once."],
+        ["Hosting murah dengan server jauh dari lokasi pengunjung.", "Cheap hosting with servers far from your visitors."],
+        ["Font dan animasi berat yang dimuat sebelum isi utama.", "Heavy fonts and animations loaded before the main content."],
+      ]),
+      h2("Langkah perbaikan tanpa membangun ulang", "Fixes that do not require a rebuild"),
+      p(
+        "Mulailah dari gambar: kompres dan sesuaikan ukurannya dengan ruang tampil. Lalu matikan skrip yang tidak lagi Anda pakai. Setelah itu, pindahkan hosting ke layanan yang menyajikan halaman dari lokasi terdekat pengunjung. Tiga langkah ini biasanya memangkas waktu buka halaman secara terasa.",
+        "Start with images: compress them and match their size to the space they occupy. Then switch off scripts you no longer use. After that, move hosting to a service that serves pages from a location near your visitors. These three steps usually cut load time noticeably.",
+      ),
+      h2("Kapan membangun ulang lebih masuk akal", "When rebuilding makes more sense"),
+      p(
+        "Jika website sudah dipenuhi plugin yang saling bergantung, setiap perbaikan kecil berisiko merusak bagian lain. Pada titik itu, membangun ulang dengan pendekatan modern sering lebih murah daripada merawat sesuatu yang memang berat sejak awal.",
+        "If the site is packed with interdependent plugins, every small fix risks breaking something else. At that point, rebuilding with a modern approach is often cheaper than maintaining something that was heavy from the start.",
+      ),
+      quote(
+        "Halaman yang lambat tidak membuat pelanggan mengeluh. Ia membuat mereka pergi diam-diam.",
+        "A slow page does not make customers complain. It makes them leave quietly.",
+      ),
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => posts.find((post) => post.slug === slug);
