@@ -16,7 +16,6 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProcessRouteImport } from './routes/process'
-import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -59,11 +58,6 @@ const ProcessRoute = ProcessRouteImport.update({
   path: '/process',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -103,7 +97,6 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/process': typeof ProcessRoute
-  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/work': typeof WorkRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
@@ -118,7 +111,6 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/process': typeof ProcessRoute
-  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/work/$slug': typeof WorkSlugRoute
@@ -134,7 +126,6 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/process': typeof ProcessRoute
-  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/work': typeof WorkRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
@@ -152,7 +143,6 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/process'
-    | '/services'
     | '/sitemap.xml'
     | '/work'
     | '/blog/$slug'
@@ -167,7 +157,6 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/process'
-    | '/services'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/work/$slug'
@@ -182,7 +171,6 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/process'
-    | '/services'
     | '/sitemap.xml'
     | '/work'
     | '/blog/$slug'
@@ -199,7 +187,6 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
   ProcessRoute: typeof ProcessRoute
-  ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WorkRoute: typeof WorkRouteWithChildren
 }
@@ -253,13 +240,6 @@ declare module '@tanstack/react-router' {
       path: '/process'
       fullPath: '/process'
       preLoaderRoute: typeof ProcessRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -339,7 +319,6 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
   ProcessRoute: ProcessRoute,
-  ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   WorkRoute: WorkRouteWithChildren,
 }
