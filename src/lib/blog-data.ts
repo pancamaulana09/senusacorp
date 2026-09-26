@@ -3,6 +3,10 @@ import coverWordpress from "../assets/blog/perbandingan-wordpress-vs-website-mod
 import coverUmkm from "../assets/blog/manfaat-website-untuk-bisnis-dan-umkm-senusacorp.jpg";
 import coverSistem from "../assets/blog/sistem-aplikasi-bisnis-kustom-crm-hrm-senusacorp.jpg";
 import coverSeo from "../assets/blog/strategi-seo-website-bisnis-google-indonesia-senusacorp.jpg";
+import coverMemilih from "../assets/blog/tips-memilih-jasa-pembuatan-website-terpercaya-senusacorp.jpg";
+import coverToko from "../assets/blog/toko-online-sendiri-vs-marketplace-senusacorp.jpg";
+import coverProfile from "../assets/blog/fitur-wajib-website-company-profile-senusacorp.jpg";
+import coverSpeed from "../assets/blog/kecepatan-loading-website-dan-penjualan-senusacorp.jpg";
 
 export type Bi = { id: string; en: string };
 export type Block =
@@ -52,7 +56,7 @@ export const posts: Post[] = [
       "Panduan biaya jasa pembuatan website bisnis di Indonesia 2026: kisaran harga, rincian komponen, biaya domain dan hosting, serta cara memilih paket tanpa biaya tersembunyi.",
     keywords: ["biaya pembuatan website", "jasa pembuatan website", "harga website bisnis"],
     cover: coverBiaya,
-    coverAlt: { id: "Ilustrasi rincian biaya pembuatan website bisnis di Indonesia oleh SenusaCorp", en: "Illustration of business website cost breakdown in Indonesia by SenusaCorp" },
+    coverAlt: { id: "Meja kerja dengan laptop dan rincian anggaran biaya pembuatan website bisnis di Indonesia", en: "Desk with laptop and printed budget documents for business website cost planning in Indonesia" },
     body: [
       p(
         "Pertanyaan pertama hampir setiap pemilik usaha sama: berapa sebenarnya biaya membuat website bisnis? Jawabannya sangat bervariasi karena yang dijual bukan sekadar halaman, melainkan waktu perancangan, kualitas rekayasa, dan dukungan setelah tayang.",
@@ -120,7 +124,7 @@ export const posts: Post[] = [
       "Perbandingan WordPress dan website modern tanpa plugin: kecepatan loading, keamanan, biaya perawatan, skalabilitas, dan kapan sebaiknya memilih masing-masing untuk bisnis.",
     keywords: ["wordpress vs custom", "website cepat", "keamanan website bisnis"],
     cover: coverWordpress,
-    coverAlt: { id: "Perbandingan performa WordPress dan website modern buatan SenusaCorp", en: "Performance comparison between WordPress and a modern SenusaCorp website" },
+    coverAlt: { id: "Meja developer dengan dua layar menampilkan kode dan website modern yang cepat dibuka", en: "Developer desk with dual monitors showing clean code and a fast modern website" },
     body: [
       p(
         "WordPress menguasai sebagian besar internet dan tetap masuk akal untuk banyak kebutuhan. Namun sejak kecepatan halaman menjadi faktor peringkat Google dan serangan otomatis semakin sering, pertanyaannya bukan lagi mana yang populer, melainkan mana yang lebih murah dirawat selama tiga tahun.",
@@ -171,7 +175,7 @@ export const posts: Post[] = [
       "Alasan praktis mengapa UMKM dan bisnis Indonesia membutuhkan website sendiri: kredibilitas, ditemukan di Google, penjualan 24 jam, dan kepemilikan data pelanggan.",
     keywords: ["pentingnya website untuk bisnis", "website umkm", "digitalisasi usaha kecil"],
     cover: coverUmkm,
-    coverAlt: { id: "Ilustrasi manfaat website sendiri untuk bisnis dan UMKM di Indonesia", en: "Illustration of the benefits of owning a website for Indonesian small businesses" },
+    coverAlt: { id: "Pemilik UMKM mengelola pesanan online dari tablet di toko miliknya", en: "Small business owner managing online orders from a tablet in their own shop" },
     body: [
       p(
         "Banyak usaha di Indonesia berjalan baik hanya dengan Instagram dan WhatsApp. Masalahnya muncul ketika calon pembeli besar, mitra, atau instansi mencari informasi resmi dan tidak menemukan apa pun selain akun media sosial.",
@@ -215,7 +219,7 @@ export const posts: Post[] = [
       "Panduan membangun sistem aplikasi bisnis kustom: CRM, HRM, dan operasional internal. Fitur wajib, hak akses pengguna, keamanan data, biaya, dan waktu pengerjaan.",
     keywords: ["pembuatan aplikasi bisnis", "sistem crm indonesia", "aplikasi hrm kustom"],
     cover: coverSistem,
-    coverAlt: { id: "Ilustrasi sistem aplikasi bisnis kustom CRM dan HRM dengan hak akses bertingkat", en: "Illustration of a custom CRM and HRM business system with layered access control" },
+    coverAlt: { id: "Tim bisnis meninjau dasbor data sistem CRM dan HRM di ruang rapat modern", en: "Business team reviewing a CRM and HRM data dashboard in a modern meeting room" },
     body: [
       p(
         "Ketika tim Anda mengelola pelanggan di spreadsheet, absensi di grup pesan, dan laporan di berkas terpisah, biaya sesungguhnya bukan pada perangkat lunak, melainkan pada jam kerja yang hilang dan kesalahan pencatatan.",
@@ -268,7 +272,7 @@ export const posts: Post[] = [
       "Panduan SEO website bisnis di Indonesia: riset kata kunci, struktur halaman, kecepatan loading, Google Search Console, SEO lokal, dan cara muncul di pencarian AI.",
     keywords: ["seo website bisnis", "cara muncul di google", "seo lokal indonesia"],
     cover: coverSeo,
-    coverAlt: { id: "Ilustrasi strategi SEO agar website bisnis muncul di halaman pertama Google", en: "Illustration of SEO strategy to rank a business website on Google's first page" },
+    coverAlt: { id: "Laptop menampilkan grafik kunjungan organik yang naik hasil strategi SEO website bisnis", en: "Laptop showing rising organic traffic charts from a business website SEO strategy" },
     body: [
       p(
         "Website yang bagus tanpa pengunjung sama saja dengan toko indah di gang buntu. SEO adalah pekerjaan memindahkan toko itu ke jalan yang ramai, dan sebagian besar langkahnya bisa dikerjakan sendiri.",
