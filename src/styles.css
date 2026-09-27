@@ -111,3 +111,23 @@ body{overflow-x:hidden}.site-header{height:72px;position:sticky;top:0;padding-in
 .svc-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:50px}.svc-tier{border:1px solid #fff3;padding:28px;display:flex;flex-direction:column;border-radius:24px}.svc-tier.is-featured{background:#fff;color:var(--ink)}.svc-tier h3{font:600 28px "Space Grotesk";margin:18px 0 4px}.svc-price{font:600 clamp(28px,3vw,40px) "Space Grotesk";color:var(--lime);margin:0 0 20px}.svc-tier.is-featured .svc-price{color:var(--ink)}.svc-tier ul{list-style:none;padding:0;margin:0 0 28px;line-height:1.9}.svc-tier li{display:flex;gap:10px;align-items:center}.svc-tier .button{margin-top:auto}.svc-note{margin-top:30px;opacity:.75}.svc-note a{text-decoration:underline}
 .svc-faq{max-width:1000px;margin:auto}.svc-faq details{border-top:1px solid var(--line);padding:22px 0}.svc-faq summary{font:500 clamp(19px,2.2vw,28px) "Space Grotesk";cursor:pointer}.svc-faq p{color:#555;line-height:1.7}
 @media(max-width:850px){.svc-intro,.svc-checks,.svc-tiers{grid-template-columns:1fr}.svc-steps{grid-template-columns:1fr 1fr}.svc-steps li{border-bottom:1px solid var(--line)}}
+
+/* Page editorial photos */
+.page-photo { margin: 0; }
+.page-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+  object-fit: cover;
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+.page-photo figcaption {
+  margin-top: 0.85rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  opacity: 0.68;
+  max-width: 52ch;
+}
+.contact-direct + .page-photo, .page-photo + .contact-direct { margin-top: 1.5rem; }
+@media (max-width: 720px) { .page-photo img { border-radius: 20px; } }
