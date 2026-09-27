@@ -13,7 +13,16 @@ export const Route = createFileRoute("/sitemap.xml")({
     handlers: {
       GET: async () => {
         const router = await getRouterInstance();
-        const entries: SitemapEntry[] = sitemapStaticPaths(router).map((path) => ({ path }));
+        const pagePhotoByPath: Record<string, (typeof pageImages)[keyof typeof pageImages]> = {
+          "/about": pageImages.about,
+          "/process": pageImages.process,
+          "/pricing": pageImages.pricing,
+          "/contact": pageImages.contact,
+        };
+        const entries: SitemapEntry[] = sitemapStaticPaths(router).map((path) => {
+          const photo = pagePhotoByPath[path];
+          return photo ? { path, images: [{ loc: photo.src, title: photo.title, caption: photo.alt.id }] } : { path };
+        });
 
         const projectRouteId = "/work/$slug";
         if (isSitemapRouteIncluded(router.routesById[projectRouteId])) {
