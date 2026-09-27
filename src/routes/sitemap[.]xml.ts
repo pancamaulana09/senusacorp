@@ -4,6 +4,7 @@ import { sitemapPathForLocation, sitemapStaticPaths, sitemapXML, isSitemapRouteI
 import { projects } from "@/lib/site-data";
 import { posts } from "@/lib/blog-data";
 import { services } from "@/lib/services-data";
+import { pageImages } from "@/lib/page-images";
 
 import { SITE_URL as BASE_URL } from "@/lib/seo";
 
@@ -13,7 +14,16 @@ export const Route = createFileRoute("/sitemap.xml")({
     handlers: {
       GET: async () => {
         const router = await getRouterInstance();
-        const entries: SitemapEntry[] = sitemapStaticPaths(router).map((path) => ({ path }));
+        const pagePhotoByPath: Record<string, (typeof pageImages)[keyof typeof pageImages]> = {
+          "/about": pageImages.about,
+          "/process": pageImages.process,
+          "/pricing": pageImages.pricing,
+          "/contact": pageImages.contact,
+        };
+        const entries: SitemapEntry[] = sitemapStaticPaths(router).map((path) => {
+          const photo = pagePhotoByPath[path];
+          return photo ? { path, images: [{ loc: photo.src, title: photo.title, caption: photo.alt.id }] } : { path };
+        });
 
         const projectRouteId = "/work/$slug";
         if (isSitemapRouteIncluded(router.routesById[projectRouteId])) {
