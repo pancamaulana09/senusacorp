@@ -4,6 +4,7 @@ import { sitemapPathForLocation, sitemapStaticPaths, sitemapXML, isSitemapRouteI
 import { projects } from "@/lib/site-data";
 import { posts } from "@/lib/blog-data";
 import { services } from "@/lib/services-data";
+import { pageImages } from "@/lib/page-images";
 
 import { SITE_URL as BASE_URL } from "@/lib/seo";
 
